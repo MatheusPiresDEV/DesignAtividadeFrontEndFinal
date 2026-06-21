@@ -40,8 +40,7 @@ O site é composto por 4 páginas de navegação totalmente responsivas através
 ## 🔗 Links de Acesso
 - **Repositório no GitHub:** https://github.com/MatheusPiresDEV/DesignAtividadeFrontEndFinal.git
 - **Site Publicado (GitHub Pages):** https://matheuspiresdev.github.io/DesignAtividadeFrontEndFinal/
-- **Vídeo de Apresentação no YouTube:** Perae
-
+- **Vídeo de Apresentação no YouTube:** https://youtu.be/nK7lRJHMPRs
 ---
 
 ## 👥 Integrantes
