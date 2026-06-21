@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crie Seu Webfólio - Studio Vivre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/customizacao.css">
+</head>
+
+<body>
+
+    <header class="topo-site">
+        <nav class="menu-navegacao">
+            <a href="index.html" class="marca-neoclassica-container">
+                <div class="emblema-minimizado">
+                    <img src="./assets/LogoSite.png" alt="Ícone MP">
+                </div>
+
+                <span class="texto-marca-clssica">MP Portfólios</span>
+            </a>
+            <input type="checkbox" id="controle-menu" class="botao-menu-checkbox">
+            <label for="controle-menu" class="desenho-hamburguer">
+                <span class="traco-linha"></span>
+                <span class="traco-linha"></span>
+                <span class="traco-linha"></span>
+            </label>
+            <ul class="lista-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="customizar.html" class="link-ativo">Criar Página</a></li>
+                <li><a href="duvidas.html">Dúvidas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="caixona-introducao">
+            <div class="conteudo-centro">
+                <span class="subtitulo-pequeno">Plataforma Multipáginas</span>
+                <h1>Estúdio de Criação Completo</h1>
+                <p>Configure uma estrutura profissional contendo 4 páginas integradas. Insira links públicos de imagens
+                    (ex: Unsplash) para compor o seu design visual.</p>
+                <button type="button" id="btn-gerar-aleatorio" class="botao-aleatorio">🎲 Gerar Projeto
+                    Aleatório</button>
+            </div>
+        </section>
+
+        <div class="customizacao-container">
+            <section class="painel-criacao">
+                <h2>Configurações do Ecossistema</h2>
+                <form id="formulario-customizacao">
+
+                    <fieldset class="secao-formulario">
+                        <legend>1. Identidade & Estilo Global</legend>
+                        <div class="formulario-grupo">
+                            <label for="campo-nome">URL identificadora (ID do site):</label>
+                            <input type="text" id="campo-nome" placeholder="Ex: escritorio-vivre" required>
+                        </div>
+                        <div class="formulario-grupo-duplo">
+                            <div class="formulario-grupo">
+                                <label for="campo-cor">Cor de Fundo:</label>
+                                <input type="color" id="campo-cor" value="#ffffff">
+                            </div>
+                            <div class="formulario-grupo">
+                                <label for="campo-cor-texto">Cor dos Textos:</label>
+                                <input type="color" id="campo-cor-texto" value="#2c2a29">
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="secao-formulario">
+                        <legend>2. Página: Início</legend>
+                        <div class="formulario-grupo">
+                            <label for="inicio-titulo">Título de Boas-Vindas:</label>
+                            <input type="text" id="inicio-titulo" placeholder="Ex: Design que transforma vidas">
+                        </div>
+                        <div class="formulario-grupo">
+                            <label for="inicio-banner">Link da Imagem de Destaque (URL):</label>
+                            <input type="url" id="inicio-banner" placeholder="https://images.unsplash.com/...">
+                        </div>
+                        <div class="formulario-grupo">
+                            <label for="inicio-texto">Manifesto Inicial:</label>
+                            <textarea id="inicio-texto"
+                                placeholder="Escreva o texto de introdução do seu estúdio..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="secao-formulario">
+                        <legend>3. Página: Sobre & Pilares</legend>
+                        <div class="formulario-grupo">
+                            <label for="sobre-titulo">Título da Seção:</label>
+                            <input type="text" id="sobre-titulo" placeholder="Ex: Nossa Trajetória">
+                        </div>
+                        <div class="formulario-grupo">
+                            <label for="sobre-texto">História e Conceito do Negócio:</label>
+                            <textarea id="sobre-texto"
+                                placeholder="Fale sobre a fundação, valores e missão de mercado..."></textarea>
+                        </div>
+                        <div class="formulario-grupo">
+                            <label>Destaques/Pilares da Empresa (Cards):</label>
+                            <input type="text" id="sobre-pilar-1" placeholder="Pilar 1 (Ex: Sustentabilidade)"
+                                style="margin-bottom: 0.5rem;">
+                            <input type="text" id="sobre-pilar-2" placeholder="Pilar 2 (Ex: Alta Performance)"
+                                style="margin-bottom: 0.5rem;">
+                            <input type="text" id="sobre-pilar-3" placeholder="Pilar 3 (Ex: Atendimento Exclusivo)">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="secao-formulario">
+                        <legend>4. Página: Projetos (Antes e Depois)</legend>
+                        <div class="formulario-grupo">
+                            <label for="projeto-titulo">Nome do Caso de Destaque:</label>
+                            <input type="text" id="projeto-titulo" placeholder="Ex: Reforma Art Deco">
+                        </div>
+                        <div class="formulario-grupo-duplo">
+                            <div class="formulario-grupo">
+                                <label for="projeto-img-antes">Link da Foto (Antes):</label>
+                                <input type="url" id="projeto-img-antes" placeholder="Link da imagem do espaço antigo">
+                            </div>
+                            <div class="formulario-grupo">
+                                <label for="projeto-img-depois">Link da Foto (Depois):</label>
+                                <input type="url" id="projeto-img-depois"
+                                    placeholder="Link da imagem do espaço reformado">
+                            </div>
+                        </div>
+                        <div class="formulario-grupo">
+                            <label for="projeto-texto">Descrição Técnica da Obra:</label>
+                            <textarea id="projeto-texto"
+                                placeholder="Detalhe as soluções estruturais aplicadas na reforma..."></textarea>
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="secao-formulario">
+                        <legend>5. Página: Contato & Localização</legend>
+                        <div class="formulario-grupo">
+                            <label for="contato-email">E-mail Corporativo:</label>
+                            <input type="email" id="contato-email" placeholder="contato@empresa.com">
+                        </div>
+                        <div class="formulario-grupo">
+                            <label for="contato-localizacao">Endereço / Localização:</label>
+                            <input type="text" id="contato-localizacao"
+                                placeholder="Ex: Av. Paulista, 1000 - São Paulo, SP">
+                        </div>
+                    </fieldset>
+
+                    <div class="botoes-grupo">
+                        <button type="button" id="btn-salvar-rascunho" class="botao-secundario">💾 Guardar
+                            Dados</button>
+                        <button type="button" id="btn-publicar-pagina" class="botao-principal">🚀 Finalizar &
+                            Publicar</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="area-visualizacao">
+                <div class="preview-header">
+                    👁️ Amostra Estrutural Ativa (Navegue pelas abas do preview)
+                </div>
+
+                <nav class="preview-nav-abas">
+                    <button class="aba-item ativa" data-alvo="view-inicio">Início</button>
+                    <button class="aba-item" data-alvo="view-sobre">Sobre</button>
+                    <button class="aba-item" data-alvo="view-projetos">Projetos</button>
+                    <button class="aba-item" data-alvo="view-contato">Contato</button>
+                </nav>
+
+                <div class="pagina-customizada">
+                    <div id="view-inicio" class="bloco-aba-conteudo ativa">
+                        <div class="banner-customizado" id="preview-inicio-banner">
+                            <div class="banner-vazio">Insira uma URL de imagem de capa válida.</div>
+                        </div>
+                        <h2 class="titulo-customizado" id="preview-inicio-titulo">Título da Home</h2>
+                        <p class="texto-customizado" id="preview-inicio-texto">Manifesto ou texto inicial.</p>
+                    </div>
+
+                    <div id="view-sobre" class="bloco-aba-conteudo">
+                        <h2 class="titulo-customizado" id="preview-sobre-titulo">Sobre a Empresa</h2>
+                        <p class="texto-customizado" id="preview-sobre-texto">História descritiva.</p>
+
+                        <div class="container-cards-pilares" id="preview-container-pilares">
+                        </div>
+                    </div>
+
+                    <div id="view-projetos" class="bloco-aba-conteudo">
+                        <h2 class="titulo-customizado" id="preview-projeto-titulo">Projeto de Destaque</h2>
+                        <div class="grid-antes-depois">
+                            <div class="box-comparativo">
+                                <span>Antes</span>
+                                <div class="wrapper-img" id="preview-img-antes"></div>
+                            </div>
+                            <div class="box-comparativo">
+                                <span>Depois</span>
+                                <div class="wrapper-img" id="preview-img-depois"></div>
+                            </div>
+                        </div>
+                        <p class="texto-customizado" id="preview-projeto-texto">Descrição técnica.</p>
+                    </div>
+
+                    <div id="view-contato" class="bloco-aba-conteudo">
+                        <h2 class="titulo-customizado">Contato & Localização</h2>
+                        <div class="info-contato-bloco">
+                            <p><strong>E-mail:</strong> <span id="preview-contato-email">-</span></p>
+                            <p><strong>Endereço:</strong> <span id="preview-contato-localizacao">-</span></p>
+                        </div>
+
+                        <div class="mapa-container">
+                            <iframe id="preview-mapa-frame"
+                                src="https://maps.google.com/maps?q=Sao%20Paulo&t=&z=13&ie=UTF-8&iwloc=&output=embed"
+                                frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="pagina-publicada">
+        <div class="barra-compartilhamento">
+            <div></div>
+            <div class="botoes-compartilhar-grupo">
+                <button class="btn-link-acao" id="btn-copiar-link" onclick="copiarLinkGerado()">📋 Copiar Link</button>
+                <button class="btn-link-acao" onclick="voltarAoPainelComModal()">✏️ Voltar e Editar</button>
+            </div>
+        </div>
+
+        <nav class="publicado-menu-nav">
+            <span class="marca-publicada">PORTFÓLIO DIGITAL</span>
+            <div class="publicado-links">
+                <button class="pub-nav-item ativa" data-pub-alvo="pub-inicio">Início</button>
+                <button class="pub-nav-item" data-pub-alvo="pub-sobre">Sobre</button>
+                <button class="pub-nav-item" data-pub-alvo="pub-projetos">Projetos</button>
+                <button class="pub-nav-item" data-pub-alvo="pub-contato">Contato</button>
+            </div>
+        </nav>
+
+        <div class="pagina-publicada-conteudo">
+            <div id="pub-inicio" class="bloco-pub-conteudo ativa">
+                <div class="banner-customizado" id="pub-view-banner"></div>
+                <h1 class="titulo-customizado" id="pub-view-inicio-titulo"></h1>
+                <p class="texto-customizado" id="pub-view-inicio-texto"></p>
+            </div>
+            <div id="pub-sobre" class="bloco-pub-conteudo">
+                <h1 class="titulo-customizado" id="pub-view-sobre-titulo"></h1>
+                <p class="texto-customizado" id="pub-view-sobre-texto"></p>
+                <div class="container-cards-pilares" id="pub-container-pilares"></div>
+            </div>
+            <div id="pub-projetos" class="bloco-pub-conteudo">
+                <h1 class="titulo-customizado" id="pub-view-projeto-titulo"></h1>
+                <div class="grid-antes-depois">
+                    <div class="box-comparativo">
+                        <div class="wrapper-img" id="pub-view-antes"></div>
+                    </div>
+                    <div class="box-comparativo">
+                        <div class="wrapper-img" id="pub-view-depois"></div>
+                    </div>
+                </div>
+                <p class="texto-customizado" id="pub-view-projeto-texto"></p>
+            </div>
+            <div id="pub-contato" class="bloco-pub-conteudo">
+                <h1 class="titulo-customizado">Informações de Contato</h1>
+                <p class="texto-customizado"><strong>E-mail:</strong> <span id="pub-view-email"></span></p>
+                <p class="texto-customizado"><strong>Endereço:</strong> <span id="pub-view-localizacao"></span></p>
+
+                <div class="mapa-container">
+                    <iframe id="pub-mapa-frame"
+                        src="https://maps.google.com/maps?q=Sao%20Paulo&t=&z=13&ie=UTF-8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-sucesso">
+        <div class="modal-conteudo">
+            <h3>Operação Concluída</h3>
+            <p>Os parâmetros e modificações estruturais foram vinculados ao identificador do navegador.</p>
+            <button class="modal-botao botao-principal">Fechar Janela</button>
+        </div>
+    </div>
+
+    <footer class="rodape-fim">
+        <div class="caixa-rodape">
+            <div class="infos-projeto">
+                <span>STUDIO VIVRE</span>
+                <p>&copy; 2026 - MP Portfólios.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/customizar.js"></script>
+</body>
+
+</html>

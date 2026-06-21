@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - Studio Vivre</title>
+  
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/contato.css">
+</head>
+<body>
+
+  <header class="topo-site">
+    <nav class="menu-navegacao">
+              <a href="index.html" class="marca-neoclassica-container">
+            <div class="emblema-minimizado">
+                <img src="./assets/LogoSite.png" alt="Ícone MP">
+            </div>
+
+            <span class="texto-marca-clssica">MP Portfólios</span>
+        </a>
+      <input type="checkbox" id="controle-menu" class="botao-menu-checkbox">
+      <label for="controle-menu" class="desenho-hamburguer">
+        <span class="traco-linha"></span>
+        <span class="traco-linha"></span>
+        <span class="traco-linha"></span>
+      </label>
+      <ul class="lista-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="customizar.html">Criar Página</a></li>
+        <li><a href="duvidas.html">Dúvidas</a></li>
+        <li><a href="contato.html" class="link-ativo">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    
+    <section class="caixona-introducao">
+      <div class="conteudo-centro">
+        <span class="subtitulo-pequeno">Conecte-se Conosco</span>
+        <h1>Vamos Transformar seu Espaço</h1>
+        <p>Tem dúvidas, propostas corporativas ou quer iniciar um projeto de design personalizado? Deixe sua mensagem.</p>
+      </div>
+    </section>
+
+    <div class="contato-grid-sistema">
+      
+      <section class="formulario-container">
+        <form id="formulario-contato" novalidate>
+          
+          <div class="grupo-formulario">
+            <label for="campo-nome">Nome Completo</label>
+            <input 
+              type="text" 
+              id="campo-nome" 
+              placeholder="Ex: João Silva"
+              required
+            >
+            <div class="mensagem-erro">O preenchimento do nome é obrigatório.</div>
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="campo-email">E-mail Corporativo</label>
+            <input 
+              type="email" 
+              id="campo-email" 
+              placeholder="seu.email@exemplo.com"
+              required
+            >
+            <div class="mensagem-erro">Insira um endereço de e-mail válido contendo @.</div>
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="campo-mensagem">Como podemos ajudar?</label>
+            <textarea 
+              id="campo-mensagem" 
+              placeholder="Detalhe brevemente sua ideia ou necessidade estrutural..."
+              required
+            ></textarea>
+            <div class="mensagem-erro">Escreva sua mensagem antes de submeter.</div>
+          </div>
+
+          <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+        </form>
+      </section>
+
+      <aside class="info-contato-lateral">
+        
+        <div class="card-info-bloco">
+          <h4>Atendimento Direto</h4>
+          <div class="info-item">
+            <strong>E-mail:</strong> contato@studiovivre.com.br
+          </div>
+          <div class="info-item">
+            <strong>Telefone:</strong> (11) 98765-4321
+          </div>
+          <div class="info-item">
+            <strong>Horário:</strong> Segunda a Sexta, das 9h às 18h
+          </div>
+        </div>
+
+        <div class="card-info-bloco">
+          <h4>Nosso Escritório</h4>
+          <div class="info-item" style="margin-bottom: 1rem;">
+            <strong>Endereço:</strong> Alameda Lorena, 1420 - Jardins, São Paulo - SP
+          </div>
+          
+          <div class="mapa-contato-wrap">
+            <iframe 
+              src="https://maps.google.com/maps?q=Alameda%20Lorena%2C%201420%20-%20Jardins%2C%20S%C3%A3o%20Paulo%20-%20SP&t=&z=15&ie=UTF-8&iwloc=&output=embed" 
+              frameborder="0" 
+              scrolling="no" 
+              marginheight="0" 
+              marginwidth="0">
+            </iframe>
+          </div>
+        </div>
+
+      </aside>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="contato-modal-sucesso">
+    <div class="modal-caixa">
+      <div class="modal-icone-sucesso">
+        <div class="circulo-confirmacao">✓</div>
+      </div>
+      <h2>Mensagem Protocolada!</h2>
+      <p>Agradecemos o contato. Nosso time técnico analisará suas especificações e retornará em até 24 horas úteis.</p>
+      <button class="modal-botao-fechar" id="btn-fechar-modal">Retornar ao Site</button>
+    </div>
+  </div>
+
+  <footer class="rodape-fim">
+    <div class="caixa-rodape">
+      <div class="infos-projeto">
+        <span>
+                    <a href="index.html" class="marca-neoclassica-container">
+            <div class="emblema-minimizado">
+                <img src="./assets/LogoSite.png" alt="Ícone MP">
+            </div>
+
+            <span class="texto-marca-clssica"></span>
+        </a>
+        </span>
+        <p>© 2026 - MP Portfólios.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/contato.js"></script>
+</body>
+</html>

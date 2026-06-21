@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dúvidas Frequentes - Studio Vivre</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/duvidas.css">
+</head>
+
+<body>
+
+    <header class="topo-site">
+        <nav class="menu-navegacao">
+            <a href="index.html" class="marca-neoclassica-container">
+                <div class="emblema-minimizado">
+                    <img src="./assets/LogoSite.png" alt="Ícone MP">
+                </div>
+
+                <span class="texto-marca-clssica">MP Portfólios</span>
+            </a>
+            <input type="checkbox" id="controle-menu" class="botao-menu-checkbox">
+            <label for="controle-menu" class="desenho-hamburguer">
+                <span class="traco-linha"></span>
+                <span class="traco-linha"></span>
+                <span class="traco-linha"></span>
+            </label>
+            <ul class="lista-links">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="customizar.html">Criar Página</a></li>
+                <li><a href="duvidas.html" class="link-ativo">Dúvidas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="principal-faq-layout">
+
+        <section class="caixona-introducao">
+            <div class="conteudo-centro">
+                <span class="subtitulo-pequeno">Central de Ajuda</span>
+                <h1>Perguntas Frequentes</h1>
+                <p>Tire suas dúvidas sobre o ecossistema de renderização, salvamento local de portfólios e manuseio da
+                    nossa plataforma.</p>
+            </div>
+        </section>
+
+        <div class="faq-grid-sistema">
+
+            <section class="faq-container" aria-label="Perguntas e Respostas">
+
+                <div class="faq-item">
+                    <button class="faq-pergunta" aria-expanded="false">
+                        <span class="faq-pergunta-texto">Como faço para criar minha página de design?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-resposta-wrapper">
+                        <div class="faq-resposta-conteudo">
+                            <p>
+                                É muito simples! Clique em <strong>"Criar Página"</strong> no menu superior. Preencha o
+                                formulário técnico com seus dados estruturais,
+                                escolha as paletas cromáticas de fundo e texto, adicione uma imagem de banner e escreva
+                                seu manifesto descritivo. Você verá a pré-visualização
+                                em tempo real ao lado. Quando estiver satisfeito, clique em "Finalizar & Publicar" para
+                                gerar sua tela cheia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pergunta" aria-expanded="false">
+                        <span class="faq-pergunta-texto">Posso salvar meu trabalho sem publicar?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-resposta-wrapper">
+                        <div class="faq-resposta-conteudo">
+                            <p>
+                                Sim! Ao clicar em <strong>"Guardar Dados"</strong>, o sistema captura todo o pacote
+                                estrutural configurado até o momento e o preserva localmente na memória interna do seu
+                                navegador (LocalStorage). Isso assegura flexibilidade total para que você retorne
+                                posteriormente e dê continuidade à customização sem sofrer perdas de dados.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pergunta" aria-expanded="false">
+                        <span class="faq-pergunta-texto">Posso alterar a cor de fundo da página?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-resposta-wrapper">
+                        <div class="faq-resposta-conteudo">
+                            <p>
+                                Sim, a customização cromática oferece autonomia completa. O seletor de paletas injeta em
+                                tempo real os tons hexadecimais escolhidos tanto nas caixas do painel de visualização
+                                quanto na barra de navegação superior interna da tela de publicação.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="faq-item">
+                    <button class="faq-pergunta" aria-expanded="false">
+                        <span class="faq-pergunta-texto">Como valido o formulário de contato?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-resposta-wrapper">
+                        <div class="faq-resposta-conteudo">
+                            <p>
+                                A validação é feita de maneira nativa com foco em usabilidade. O navegador audita se os
+                                inputs obrigatórios foram devidamente interceptados e avalia a estrutura textual do
+                                e-mail digitado. Caso existam irregularidades, gatilhos automáticos guiarão o
+                                preenchimento correto antes do disparo simulado.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-pergunta" aria-expanded="false">
+                        <span class="faq-pergunta-texto">Meus dados continuam se eu fechar o navegador?</span>
+                        <span class="faq-icon">▼</span>
+                    </button>
+                    <div class="faq-resposta-wrapper">
+                        <div class="faq-resposta-conteudo">
+                            <p>
+                                Sim. A tecnologia de persistência do LocalStorage armazena os dados sem prazo de
+                                expiração no cache privado do navegador. Portanto, suas modificações continuarão
+                                intactas ao fechar abas ou reiniciar o sistema, sendo apagadas apenas em caso de limpeza
+                                completa dos dados do browser.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <aside class="faq-suporte-lateral">
+                <div class="card-suporte-item">
+                    <h4>Suporte Express</h4>
+                    <p>Não encontrou o que precisava? Envie uma mensagem direta para o nosso time de engenharia de
+                        design.</p>
+                    <a href="contato.html" class="link-card-botao">Abrir Chamado →</a>
+                </div>
+
+                <div class="card-suporte-item">
+                    <h4>Avisos de Melhoria</h4>
+                    <p>Novos módulos de animação interativa tridimensional e inserção de múltiplos portfólios estão em
+                        fase conceitual.</p>
+                </div>
+            </aside>
+        </div>
+
+        <section class="video-section">
+            <div class="conteudo-centro">
+                <h2>Demonstração da Ferramenta</h2>
+                <p>Assista ao passo a passo de como estruturar seu portfólio virtual de interiores de ponta a ponta.</p>
+
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                            title="Apresentação Design de Interiores"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape-fim">
+        <div class="caixa-rodape">
+            <div class="infos-projeto">
+                <span>STUDIO VIVRE</span>
+                <p>© 2026 - MP Portfólios.</p>
+                <p><a href="contato.html" style="color: #b88e64; text-decoration: none;">Entre em contato conosco</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const perguntas = document.querySelectorAll(".faq-pergunta");
+
+            perguntas.forEach(botao => {
+                botao.addEventListener("click", () => {
+                    const estaAtivo = botao.getAttribute("aria-expanded") === "true";
+
+                    // Sanfona
+                    perguntas.forEach(b => {
+                        b.setAttribute("aria-expanded", "false");
+                        b.parentElement.classList.remove("ativo");
+                    });
+
+                    // Abre ou fecha
+                    if (!estaAtivo) {
+                        botao.setAttribute("aria-expanded", "true");
+                        botao.parentElement.classList.add("ativo");
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

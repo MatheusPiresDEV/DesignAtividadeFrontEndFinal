@@ -1,0 +1,313 @@
+
+.contato-grid-sistema {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 3.5rem;
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+  align-items: start;
+}
+
+/* ===== CONTAINER DO FORMULÁRIO ===== */
+.formulario-container {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+#formulario-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.grupo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.grupo-formulario label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #2c2a29;
+  font-weight: 500;
+}
+
+/* INPUTS E TEXTAREA SLICK */
+.grupo-formulario input,
+.grupo-formulario textarea {
+  width: 100%;
+  padding: 1.1rem 1rem;
+  border: 1px solid #e8e4dc;
+  background-color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #2c2a29;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.grupo-formulario textarea {
+  height: 160px;
+  resize: none;
+}
+
+.grupo-formulario input:focus,
+.grupo-formulario textarea:focus {
+  border-color: #2c2a29;
+  background-color: #fbfaf8;
+}
+
+/* CLASSES DE ERRO E VALIDAÇÃO DINÂMICA */
+.mensagem-erro {
+  font-size: 0.78rem;
+  color: #d9534f;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.grupo-formulario.campo-invalido input,
+.grupo-formulario.campo-invalido textarea {
+  border-color: #d9534f;
+  background-color: rgba(217, 83, 79, 0.02);
+}
+
+.grupo-formulario.campo-invalido .mensagem-erro {
+  display: block;
+}
+
+/* BOTÃO DE SUBMISSÃO ELEGANTE */
+.btn-enviar {
+  align-self: flex-start;
+  padding: 1.1rem 2.5rem;
+  background-color: #2c2a29;
+  color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #b88e64;
+}
+
+/* ===== COLUNA LATERAL (CARDS DE INFORMAÇÕES) ===== */
+.info-contato-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-info-bloco {
+  background-color: #fbfaf8;
+  border: 1px solid #e8e4dc;
+  padding: 2.5rem 2rem;
+}
+
+.card-info-bloco h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #2c2a29;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid #e8e4dc;
+  padding-bottom: 0.5rem;
+}
+
+.info-item {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #615e5a;
+  margin-bottom: 0.75rem;
+}
+
+.info-item strong {
+  color: #2c2a29;
+  font-weight: 500;
+}
+
+/* CONTEINER INTERATIVO DO MAPA */
+.mapa-contato-wrap {
+  width: 100%;
+  height: 220px;
+  border: 1px solid #e8e4dc;
+  overflow: hidden;
+}
+
+.mapa-contato-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.5); /* Casamento perfeito com paletas arquitetônicas */
+  transition: filter 0.3s ease;
+}
+
+.mapa-contato-wrap:hover iframe {
+  filter: grayscale(0);
+}
+
+/* ===== MODAL DE CONFIRMAÇÃO COM DESLIZAMENTO FLUIDO ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(44, 42, 41, 0.6); /* Overlay cinza-escura */
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.modal-overlay.ativo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-caixa {
+  background-color: #ffffff;
+  padding: 3.5rem 2.5rem;
+  max-width: 480px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  transform: translateY(30px);
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.modal-overlay.ativo .modal-caixa {
+  transform: translateY(0);
+}
+
+.modal-icone-sucesso {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.circulo-confirmacao {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #b88e64;
+  border-radius: 50%;
+  color: #b88e64;
+  font-size: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-caixa h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #2c2a29;
+  margin-bottom: 1rem;
+}
+
+.modal-caixa p {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #615e5a;
+  margin-bottom: 2rem;
+}
+
+.modal-botao-fechar {
+  width: 100%;
+  padding: 1rem;
+  background-color: #2c2a29;
+  color: #ffffff;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-botao-fechar:hover {
+  background-color: #b88e64;
+}
+
+/* ===== RESPONSIVIDADE ADAPTATIVA ===== */
+@media (max-width: 992px) {
+  .contato-grid-sistema {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-enviar {
+    width: 100%; /* Botão expandido em telas mobile */
+  }
+  .modal-caixa {
+    padding: 2.5rem 1.5rem;
+  }
+}
+.marca-neoclassica-container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emblema-minimizado {
+
+  width: 90px;  
+  height: 90px; 
+  
+  border-radius: 50%;
+  border: 1px solid #b88e64;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.emblema-minimizado img {
+  
+
+  width: 150%;
+  height: 150%;
+  
+  object-fit: contain;
+  display: block;
+}
+
+.texto-marca-clssica {
+  font-family: 'Montserrat', sans-serif;
+  
+ 
+  font-size: 1.1rem;
+  
+  font-weight: 500;
+  color: #2c2a29;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.marca-neoclassica-container:hover .texto-marca-clssica {
+  color: #b88e64;
+}

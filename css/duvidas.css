@@ -1,0 +1,298 @@
+
+.faq-grid-sistema {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto 5rem;
+  padding: 0 1.5rem;
+  align-items: start;
+}
+
+/* ===== CONTAINER FAQ ===== */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* ===== ITEM FAQ (ESTRUTURA SLICK) ===== */
+.faq-item {
+  background-color: #ffffff;
+  border: 1px solid #e8e4dc; /* Linhas finas em tom areia/nude */
+  border-radius: 0px; /* Bordas retas trazem um visual mais arquitetônico e limpo */
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.faq-item:hover {
+  border-color: #b88e64; /* Realce sutil com o dourado da marca */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(44, 42, 41, 0.04);
+}
+
+/* ===== PERGUNTA (DISPARADOR/BOTÃO) ===== */
+.faq-pergunta {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75rem 1.5rem;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+.faq-pergunta:hover .faq-pergunta-texto {
+  color: #b88e64;
+}
+
+.faq-pergunta-texto {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #2c2a29; /* Grafite escuro elegante em vez de preto puro */
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.faq-icon {
+  font-size: 0.7rem; /* Ícone menor e minimalista */
+  color: #b88e64;
+  margin-left: 1.5rem;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== ANIMAÇÃO DE DESLIZAMENTO CRISTALINO ===== */
+.faq-resposta-wrapper {
+  display: grid;
+  grid-template-rows: 0fr; /* Altura computada zero por padrão */
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.faq-resposta-conteudo {
+  min-height: 0; /* Correção para o motor de renderização da Grid CSS */
+}
+
+.faq-resposta-conteudo p {
+  padding: 0 1.5rem 1.75rem 1.5rem;
+  color: #615e5a;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===== GATILHOS DE ESTADO (ATIVO) ===== */
+.faq-pergunta[aria-expanded="true"] .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-item.ativo {
+  border-color: #b88e64;
+  background-color: #fbfaf8; /* Fundo sutilmente aquecido quando aberto */
+}
+
+.faq-item.ativo .faq-resposta-wrapper {
+  grid-template-rows: 1fr; /* Abre o container de forma responsiva e fluida */
+}
+
+/* ===== BARRA LATERAL (CARDS DE SUPORTE) ===== */
+.faq-suporte-lateral {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: sticky;
+  top: 100px; /* Acompanha a rolagem da tela se o FAQ for longo */
+}
+
+.card-suporte-item {
+  background-color: #fbfaf8;
+  border: 1px solid #e8e4dc;
+  padding: 2.25rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.card-suporte-item:hover {
+  border-color: #2c2a29;
+}
+
+.card-suporte-item h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c2a29;
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.5px;
+}
+
+.card-suporte-item p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #7a7571;
+  margin-bottom: 1.5rem;
+}
+
+.link-card-botao {
+  display: inline-block;
+  color: #2c2a29;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 1px solid #b88e64;
+  padding-bottom: 2px;
+  transition: all 0.3s ease;
+}
+
+.link-card-botao:hover {
+  color: #b88e64;
+  border-bottom-color: #2c2a29;
+  transform: translateX(4px);
+}
+
+/* ===== SEÇÃO DE VÍDEO (MINIMALISTA & CINEMATOGRÁFICA) ===== */
+.video-section {
+  background-color: #2c2a29; /* Fundo escuro premium em substituição ao gradiente roxo antigo */
+  padding: 5rem 2rem;
+  color: #ffffff;
+  text-align: center;
+  margin: 5rem 0 0 0;
+}
+
+.video-section h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin-bottom: 1rem;
+}
+
+.video-section p {
+  font-size: 1.05rem;
+  color: #a8a4a0;
+  max-width: 600px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+/* ===== CONTAINER EMBED DE VÍDEO ===== */
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Mantém a proporção widescreen 16:9 perfeita */
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ===== RESPONSIVIDADE ADAPTATIVA ===== */
+@media (max-width: 992px) {
+  .faq-grid-sistema {
+    grid-template-columns: 1fr; /* Quebra em uma única coluna em tablets e celulares */
+    gap: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
+  
+  .faq-suporte-lateral {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-pergunta {
+    padding: 1.5rem 1rem;
+  }
+  
+  .faq-pergunta-texto {
+    font-size: 0.98rem;
+  }
+  
+  .faq-resposta-conteudo p {
+    padding: 0 1rem 1.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .video-section {
+    padding: 3.5rem 1rem;
+  }
+  
+  .video-section h2 {
+    font-size: 1.6rem;
+  }
+  
+  .video-section p {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+}
+.marca-neoclassica-container {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.emblema-minimizado {
+
+  width: 90px;  
+  height: 90px; 
+  
+  border-radius: 50%;
+  border: 1px solid #b88e64;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  flex-shrink: 0;
+}
+
+.emblema-minimizado img {
+  
+
+  width: 150%;
+  height: 150%;
+  
+  object-fit: contain;
+  display: block;
+}
+
+.texto-marca-clssica {
+  font-family: 'Montserrat', sans-serif;
+  
+ 
+  font-size: 1.1rem;
+  
+  font-weight: 500;
+  color: #2c2a29;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+}
+
+.marca-neoclassica-container:hover .texto-marca-clssica {
+  color: #b88e64;
+}
