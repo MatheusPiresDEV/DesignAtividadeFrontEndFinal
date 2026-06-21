@@ -9,7 +9,6 @@
   align-items: start;
 }
 
-/* ===== CONTAINER DO FORMULÁRIO ===== */
 .formulario-container {
   background-color: #ffffff;
   width: 100%;
@@ -37,7 +36,6 @@
   font-weight: 500;
 }
 
-/* INPUTS E TEXTAREA SLICK */
 .grupo-formulario input,
 .grupo-formulario textarea {
   width: 100%;
@@ -62,7 +60,6 @@
   background-color: #fbfaf8;
 }
 
-/* CLASSES DE ERRO E VALIDAÇÃO DINÂMICA */
 .mensagem-erro {
   font-size: 0.78rem;
   color: #d9534f;
@@ -80,7 +77,6 @@
   display: block;
 }
 
-/* BOTÃO DE SUBMISSÃO ELEGANTE */
 .btn-enviar {
   align-self: flex-start;
   padding: 1.1rem 2.5rem;
@@ -100,7 +96,6 @@
   background-color: #b88e64;
 }
 
-/* ===== COLUNA LATERAL (CARDS DE INFORMAÇÕES) ===== */
 .info-contato-lateral {
   display: flex;
   flex-direction: column;
@@ -135,7 +130,6 @@
   font-weight: 500;
 }
 
-/* CONTEINER INTERATIVO DO MAPA */
 .mapa-contato-wrap {
   width: 100%;
   height: 220px;
@@ -147,7 +141,7 @@
   width: 100%;
   height: 100%;
   border: 0;
-  filter: grayscale(0.5); /* Casamento perfeito com paletas arquitetônicas */
+  filter: grayscale(0.5);
   transition: filter 0.3s ease;
 }
 
@@ -155,14 +149,13 @@
   filter: grayscale(0);
 }
 
-/* ===== MODAL DE CONFIRMAÇÃO COM DESLIZAMENTO FLUIDO ===== */
 .modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(44, 42, 41, 0.6); /* Overlay cinza-escura */
+  background-color: rgba(44, 42, 41, 0.6);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
@@ -244,7 +237,6 @@
   background-color: #b88e64;
 }
 
-/* ===== RESPONSIVIDADE ADAPTATIVA ===== */
 @media (max-width: 992px) {
   .contato-grid-sistema {
     grid-template-columns: 1fr;
@@ -254,7 +246,7 @@
 
 @media (max-width: 768px) {
   .btn-enviar {
-    width: 100%; /* Botão expandido em telas mobile */
+    width: 100%;
   }
   .modal-caixa {
     padding: 2.5rem 1.5rem;

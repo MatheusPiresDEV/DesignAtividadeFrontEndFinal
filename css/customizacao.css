@@ -439,7 +439,7 @@
     width: 100%;
   }
 }
-/* Animações e Elementos Visuais do Modal */
+
 .animacao-modal {
   display: flex;
   justify-content: center;
@@ -449,7 +449,6 @@
   height: 80px;
 }
 
-/* Animação 1: Elemento que gira (Ação de Copiar Link) */
 .animacao-copiar .elemento-gira {
   width: 40px;
   height: 40px;
@@ -489,12 +488,12 @@
   }
 }
 
-/* Ajuste do botão interno gerado dinamicamente */
+
 .modal-conteudo .modal-botao {
   margin-top: 1rem;
   width: 100%;
 }
-/* Container de Cards do Bloco Sobre */
+
 .container-cards-pilares {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -505,7 +504,7 @@
 .card-pilar-item {
   border: 1px solid #e8e4dc;
   padding: 1.5rem;
-  background-color: rgba(184, 142, 100, 0.05); /* Leve tom dourado de fundo */
+  background-color: rgba(184, 142, 100, 0.05);
   text-align: center;
   transition: transform 0.3s ease;
 }
@@ -528,7 +527,7 @@
   color: #7a7571;
 }
 
-/* Estilização Estrutural do Mapa Geográfico */
+
 .mapa-container {
   width: 100%;
   height: 250px;
@@ -541,14 +540,14 @@
   width: 100%;
   height: 100%;
   border: 0;
-  filter: grayscale(0.4); /* Combina melhor com paletas minimalistas */
+  filter: grayscale(0.4); 
 }
 
 .pagina-publicada .mapa-container {
-  height: 400px; /* Maior na visualização completa */
+  height: 400px; 
 }
 
-/* Responsividade para os Cards */
+
 @media (max-width: 768px) {
   .container-cards-pilares {
     grid-template-columns: 1fr;

@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ELEMENTOS DO FORMULÁRIO
     const campoNome = document.getElementById("campo-nome");
     const campoCorFundo = document.getElementById("campo-cor");
     const campoCorTexto = document.getElementById("campo-cor-texto");
@@ -22,7 +21,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const hContEmail = document.getElementById("contato-email");
     const hContLocal = document.getElementById("contato-localizacao");
 
-    // COMPONENTES DE INTERAÇÃO
     const btnSalvar = document.getElementById("btn-salvar-rascunho");
     const btnPublicar = document.getElementById("btn-publicar-pagina");
     const btnAleatorio = document.getElementById("btn-gerar-aleatorio");
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnFecharModal = document.querySelector(".modal-botao");
     const telaPublicada = document.querySelector(".pagina-publicada");
 
-    // CONTROLADOR DE NAVEGAÇÃO INTERNA (PREVIEW)
     const botoesAba = document.querySelectorAll(".aba-item");
     const blocosAba = document.querySelectorAll(".bloco-aba-conteudo");
 
@@ -46,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // CONTROLADOR DE NAVEGAÇÃO INTERNA (PUBLICADO)
     const botoesPub = document.querySelectorAll(".pub-nav-item");
     const blocosPub = document.querySelectorAll(".bloco-pub-conteudo");
 
@@ -61,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // RENDERIZADOR COMPLETO EM TEMPO REAL
     const sincronizarModelos = () => {
         const bg = campoCorFundo.value;
         const tx = campoCorTexto.value;
@@ -74,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         document.querySelectorAll(".titulo-customizado").forEach(t => t.style.color = tx);
 
-        // Página: Início
         document.getElementById("preview-inicio-titulo").textContent = hInicioTitulo.value || "Título Provisório da Página";
         document.getElementById("pub-view-inicio-titulo").textContent = hInicioTitulo.value || "Título Provisório da Página";
 
@@ -92,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderBanner(hInicioBanner.value, "preview-inicio-banner");
         renderBanner(hInicioBanner.value, "pub-view-banner");
 
-        // Página: Sobre & Instanciação Dinâmica dos Cards
         document.getElementById("preview-sobre-titulo").textContent = hSobreTitulo.value || "Sobre a Empresa";
         document.getElementById("pub-view-sobre-titulo").textContent = hSobreTitulo.value || "Sobre a Empresa";
         document.getElementById("preview-sobre-texto").textContent = hSobreTexto.value || "História descritiva conceitual.";
@@ -122,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderCardsPilares("preview-container-pilares");
         renderCardsPilares("pub-container-pilares");
 
-        // Página: Projetos
         document.getElementById("preview-projeto-titulo").textContent = hProjTitulo.value || "Projeto de Destaque";
         document.getElementById("pub-view-projeto-titulo").textContent = hProjTitulo.value || "Projeto de Destaque";
         document.getElementById("preview-projeto-texto").textContent = hProjTexto.value || "Soluções estruturais da obra.";
@@ -141,7 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
         renderFoto(hProjDepois.value, "preview-img-depois", "Depois");
         renderFoto(hProjDepois.value, "pub-view-depois", "Depois");
 
-        // Página: Contato & Mecanismo de Atualização de Localização Geográfica
         document.getElementById("preview-contato-email").textContent = hContEmail.value || "-";
         document.getElementById("pub-view-email").textContent = hContEmail.value || "-";
         document.getElementById("preview-contato-localizacao").textContent = hContLocal.value || "-";
@@ -200,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // GERADOR DE DADOS ALEATÓRIOS ATUALIZADO (INCLUINDO CARDS E ENDEREÇO REAL PARA MAPA)
+
     if (btnAleatorio) {
         btnAleatorio.addEventListener("click", () => {
             campoNome.value = "vivre-studio-rand-" + Math.floor(Math.random() * 900 + 100);
@@ -229,7 +220,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // EXPOSIÇÃO GLOBAL DE FUNÇÕES PARA OS ATRIBUTOS ONCLICK DO HTML
+
     window.voltarAoPainel = () => {
         if (telaPublicada) telaPublicada.classList.remove("ativa");
     };

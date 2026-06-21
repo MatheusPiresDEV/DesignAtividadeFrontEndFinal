@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (formulario) {
     formulario.addEventListener("submit", (evento) => {
-      // Impede o redirecionamento padrão do HTML
       evento.preventDefault();
       
       let formularioValido = true;
@@ -14,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
       inputs.forEach(input => {
         const pai = input.parentElement;
         
-        // Validação customizada
         if (!input.value.trim()) {
           pai.classList.add("campo-invalido");
           formularioValido = false;
@@ -26,14 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      // Se passar em todos os testes, limpa os campos e dispara a janela modal
       if (formularioValido) {
         formulario.reset();
         if (modalOverlay) modalOverlay.classList.add("ativo");
       }
     });
 
-    // Remove as marcações de erro em tempo real enquanto o usuário corrige os dados
     formulario.querySelectorAll("input, textarea").forEach(input => {
       input.addEventListener("input", () => {
         const pai = input.parentElement;
@@ -50,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return padrao.test(email);
   };
 
-  // Ouvinte de fechamento da Janela Modal
   if (btnFecharModal && modalOverlay) {
     btnFecharModal.addEventListener("click", () => {
       modalOverlay.classList.remove("ativo");
